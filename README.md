@@ -1,7 +1,9 @@
 # books-api
-An API to track the books I've read. It was modeled after the tutorial provided by Michael Herman at https://mherman.org/blog/designing-a-restful-api-with-node-and-postgres/.
+This is an API to track the books I've read. 
 
-This API has 5 methods with which a user may interact with their booklist database:
+It was modeled after the tutorial provided by Michael Herman at https://mherman.org/blog/designing-a-restful-api-with-node-and-postgres/.
+
+The books-API has 5 methods with which a user may interact with their booklist database:
 
 GET: localhost:3000/api/booklist 
 Returns a list of all the books and their attributes
@@ -29,3 +31,12 @@ The JSON data in the body of the HTTP Request should adhere to the following for
 		     "magic", "Hogwarts", "friendship"
 		 ]
 }
+
+To use this project, you can:
+1. Fork/clone the repo.
+2. Change line 9 in queries.js to be the connection string with your personal username/password for PostgreSQL.
+3. Install the dependencies by typing "npm install" into your terminal while in the directory you just cloned/forked.
+4. Run "psql -U postgres -f booklist.sql" in the same terminal direectory.
+5. Run the development environment with the command "npm start".
+
+To interact with the API, I found it easiest to use Postman. Make sure that your Header has the Key "Content-Type" and the Value "application/json".
